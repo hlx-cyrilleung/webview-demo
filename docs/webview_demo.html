@@ -1,0 +1,77 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>WebView2 Two-way Demo</title>
+    <style>
+        body {
+            font-family: Segoe UI, Arial;
+            padding: 16px;
+        }
+
+        button {
+            margin-right: 8px;
+        }
+
+        #log {
+            margin-top: 12px;
+            padding: 8px;
+            background: #f3f3f3;
+            height: 220px;
+            overflow: auto;
+        }
+
+        .row {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>WebView2 Two-way Communication Demo</h2>
+
+    <div class="row">
+        <button onclick="sendToNative()">Send message to Native</button>
+        <button onclick="sendJsonToNative()">Send JSON to Native</button>
+    </div>
+
+    <div class="row">
+        <b>Last message from Native:</b>
+        <div id="fromNative">(none)</div>
+    </div>
+
+    <div id="log"></div>
+
+    <script>
+    const log = (msg) => {
+      const el = document.getElementById('log');
+      el.innerHTML += `<div>${new Date().toLocaleTimeString()} - ${msg}</div>`;
+      el.scrollTop = el.scrollHeight;
+    };
+
+    // Web -> Native
+    function sendToNative() {
+      const msg = "Hello from Web at " + new Date().toISOString();
+      window.chrome.webview.postMessage(msg);
+      log("Sent to Native: " + msg);
+    }
+
+    function sendJsonToNative() {
+      const payload = { type: "webEvent", action: "buttonClicked", at: new Date().toISOString() };
+      window.chrome.webview.postMessage(payload);
+      log("Sent JSON to Native: " + JSON.stringify(payload));
+    }
+
+    // Native -> Web (receive messages)
+    window.chrome.webview.addEventListener('message', (event) => {
+      // event.data can be string or object (if native posts JSON)
+      document.getElementById('fromNative').textContent =
+        (typeof event.data === "string") ? event.data : JSON.stringify(event.data);
+
+      log("Received from Native: " +
+        ((typeof event.data === "string") ? event.data : JSON.stringify(event.data)));
+    });
+
+    log("Page loaded. Ready for two-way messaging.");
+    </script>
+</body>
+</html>
