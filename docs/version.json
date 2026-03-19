@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "released_at": "2026-03-09",
+  "description": "Initial release of embedded HTML UI for WebView2 host.",
+
+  "changelog": [
+    {
+      "type": "added",
+      "items": [
+        "Initial UI framework setup",
+        "Home page and basic navigation",
+        "Two‑way WebView2 messaging demo (native <-> JS)"
+      ]
+    },
+    {
+      "type": "fixed",
+      "items": []
+    },
+    {
+      "type": "changed",
+      "items": []
+    }
+  ],
+  "files": "v010000.zip"
+}
