@@ -1,0 +1,25 @@
+{
+  "version": "1.1.0",
+  "released_at": "2026-02-12",
+  "summary": "Performance tuning and small UI adjustments.",
+  "changes": [
+    {
+      "type": "changed",
+      "items": [
+        "Optimized WebView2 messaging performance",
+        "Updated layout spacing across pages"
+      ]
+    },
+    {
+      "type": "fixed",
+      "items": [
+        "Corrected localization loading issue",
+        "CSS fix for dark mode buttons"
+      ]
+    }
+  ],
+  "package": {
+    "zip_url": "https://hlx-cyrilleung.github.io/webview-demo/v1.1.0/webui_bundle.zip",
+    "file_size": "3.9 MB"
+  }
+}
