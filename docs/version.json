@@ -1,25 +1,51 @@
 {
-  "version": "1.0.0",
-  "released_at": "2026-03-09",
-  "description": "Initial release of embedded HTML UI for WebView2 host.",
+  "latest_version": "1.1.0",
 
-  "changelog": [
+  "releases": [
     {
-      "type": "added",
-      "items": [
-        "Initial UI framework setup",
-        "Home page and basic navigation",
-        "Two‑way WebView2 messaging demo (native <-> JS)"
-      ]
+      "version": "1.1.0",
+      "released_at": "2026-02-12",
+      "summary": "Performance tuning and small UI adjustments.",
+      "changes": [
+        {
+          "type": "changed",
+          "items": [
+            "Optimized WebView2 messaging performance",
+            "Updated layout spacing across pages"
+          ]
+        },
+        {
+          "type": "fixed",
+          "items": [
+            "Corrected localization loading issue",
+            "CSS fix for dark mode buttons"
+          ]
+        }
+      ],
+      "package": {
+        "zip_url": "https://hlx-cyrilleung.github.io/webview-demo/v1.1.0/webui_bundle.zip",
+        "file_size": "3.9 MB"
+      }
     },
+
     {
-      "type": "fixed",
-      "items": []
-    },
-    {
-      "type": "changed",
-      "items": []
+      "version": "1.0.0",
+      "released_at": "2026-01-20",
+      "summary": "Initial release of embedded HTML UI.",
+      "changes": [
+        {
+          "type": "added",
+          "items": [
+            "Initial HTML/JS/CSS asset bundle",
+            "Two‑way communication demo between native and JS",
+            "Basic navigation UI layout"
+          ]
+        }
+      ],
+      "package": {
+        "zip_url": "https://hlx-cyrilleung.github.io/webview-demo/v1.0.0/webui_bundle.zip",
+        "file_size": "3.1 MB"
+      }
     }
-  ],
-  "files": "v010000.zip"
+  ]
 }
