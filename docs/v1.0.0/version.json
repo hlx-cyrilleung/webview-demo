@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "released_at": "2026-01-20",
+  "summary": "Initial release of embedded HTML UI.",
+  "changes": [
+    {
+      "type": "added",
+      "items": [
+        "Initial HTML/JS/CSS asset bundle",
+        "Two‑way communication demo between native and JS",
+        "Basic navigation UI layout"
+      ]
+    }
+  ],
+  "package": {
+    "zip_url": "https://hlx-cyrilleung.github.io/webview-demo/v1.0.0/webui_bundle.zip",
+    "file_size": "3.1 MB"
+  }
+}
