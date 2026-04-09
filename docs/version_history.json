@@ -1,7 +1,25 @@
 {
-  "latest_version": "1.1.0",
+  "latest_version": "2.0.0",
 
   "releases": [
+	{
+      "version": "2.0.0",
+      "released_at": "2026-03-31",
+      "summary": "Reactive Testing.",
+      "changes": [
+        {
+          "type": "changed",
+          "items": [
+            "Optimized WebView2 messaging performance",
+          ]
+        }
+      ],
+      "package": {
+        "zip_url": "https://hlx-cyrilleung.github.io/webview-demo/v2.0.0/webui_bundle.zip",
+        "file_size": "3.9 MB"
+      }
+    },
+	
     {
       "version": "1.1.0",
       "released_at": "2026-02-12",
